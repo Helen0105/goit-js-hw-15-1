@@ -816,9 +816,6 @@ var _pnotifyCss = require("@pnotify/core/dist/PNotify.css");
 var _brightThemeCss = require("@pnotify/core/dist/BrightTheme.css");
 var _debounce = require("debounce");
 var _debounceDefault = parcelHelpers.interopDefault(_debounce);
-(0, _core.success)({
-    text: "\u041F\u0456\u0434\u043A\u043B\u044E\u0447\u0435\u043D\u043E!"
-});
 const formRef = document.querySelector(".form");
 const inputRef = document.querySelector(".input");
 const htmlRef = document.querySelector(".Ourcountry");
@@ -836,6 +833,10 @@ inputRef.addEventListener("input", (0, _debounceDefault.default)((e)=>{
     fetch(`https://restcountries.com/v2/name/${search}`).then((res)=>res.json()).then((res)=>countryInfo(res));
 }, 500));
 function countryInfo(arr) {
+    if (arr.length > 10) (0, _core.error)({
+        text: "\u0417\u043D\u0430\u0439\u0434\u0435\u043D\u043E \u0437\u0430\u0431\u0430\u0433\u0430\u0442\u043E \u043A\u0440\u0430\u0457\u043D. \u0411\u0443\u0434\u044C \u043B\u0430\u0441\u043A\u0430, \u0437\u0440\u043E\u0431\u0456\u0442\u044C \u0437\u0430\u043F\u0438\u0442 \u0442\u043E\u0447\u043D\u0456\u0448\u0438\u043C",
+        delay: 3000
+    });
     if (arr.length == 1) {
         const items = arr.map((country)=>{
             // const languagesList = country.languages
@@ -848,9 +849,9 @@ function countryInfo(arr) {
         
         <div class="country-content">
           <div class="country-info">
-            <p>Capital: ${country.capital}</p>
-            <p>Population: ${country.population}</p>
-            <p>Languages:</p>
+            <p class="capital" >Capital: ${country.capital}</p>
+            <p class="population">Population: ${country.population}</p>
+            <p class="languages">Languages:</p>
             <ul>
               ${languagesList}
             </ul>

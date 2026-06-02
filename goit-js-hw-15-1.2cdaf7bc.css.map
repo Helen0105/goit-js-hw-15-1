@@ -1,1 +1,1 @@
-{"mappings":"AAAA","sources":["src/style.css"],"sourcesContent":["img {\r\n    width: 400px;\r\n}"],"names":[],"version":3,"file":"goit-js-hw-15-1.2cdaf7bc.css.map","sourceRoot":"/__parcel_source_root/"}
+{"mappings":"AAAA;;;;AAKA","sources":["src/style.css"],"sourcesContent":["img {\r\n    width: 400px;\r\n}\r\n\r\n\r\np{\r\n    font-size: 25px;\r\n}"],"names":[],"version":3,"file":"goit-js-hw-15-1.2cdaf7bc.css.map","sourceRoot":"/__parcel_source_root/"}

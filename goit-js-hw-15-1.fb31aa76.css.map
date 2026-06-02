@@ -1,0 +1,1 @@
+{"mappings":"ACAA,gBAKA","sources":["goit-js-hw-15-1.fb31aa76.css","src/style.css"],"sourcesContent":["img {\n  width: 400px;\n}\n\np {\n  font-size: 25px;\n}\n/*# sourceMappingURL=goit-js-hw-15-1.fb31aa76.css.map */\n","img {\r\n    width: 400px;\r\n}\r\n\r\n\r\np{\r\n    font-size: 25px;\r\n}"],"names":[],"version":3,"file":"goit-js-hw-15-1.fb31aa76.css.map"}
