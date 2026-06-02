@@ -150,9 +150,6 @@ import '@pnotify/core/dist/PNotify.css';
 
 import '@pnotify/core/dist/BrightTheme.css';
 
-success({
-  text: "Підключено!"
-});
 
 import debounce from 'debounce';
 
@@ -194,6 +191,15 @@ inputRef.addEventListener("input", debounce((e) => {
 
 function countryInfo(arr) {
 
+
+  if (arr.length > 10) {
+        error({
+          text: "Знайдено забагато країн. Будь ласка, зробіть запит точнішим",
+          delay: 3000
+        });
+    } 
+
+    
     if (arr.length == 1) {
 
         const items = arr.map((country) => {
@@ -210,9 +216,9 @@ function countryInfo(arr) {
         
         <div class="country-content">
           <div class="country-info">
-            <p>Capital: ${country.capital}</p>
-            <p>Population: ${country.population}</p>
-            <p>Languages:</p>
+            <p class="capital" >Capital: ${country.capital}</p>
+            <p class="population">Population: ${country.population}</p>
+            <p class="languages">Languages:</p>
             <ul>
               ${languagesList}
             </ul>
@@ -243,3 +249,4 @@ function countryInfo(arr) {
     }
   
 }
+
